@@ -1,0 +1,38 @@
+// 33 steps
+travelers = new String[]{
+        "Lisa HEALTHY London Tokyo Seattle Berlin Tokyo",
+        "Chris SICK Berlin Tokyo London Seattle Berlin",
+        "Mary SICK Seattle London Tokyo Berlin",
+        "Daren RECOVERING Berlin Berlin London Seattle"
+};
+
+// 9 steps
+travelers = new String[]{
+        "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
+        "Lynn SICK Berlin Tokyo London Seattle Berlin",
+        "Chris SICK Tokyo London Tokyo Berlin",
+        "Tyrin RECOVERING Berlin Berlin London Seattle",
+        "Rachel HEALTHY Tokyo Seattle",
+};
+
+
+// 19
+travelers = new String[]{
+        "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
+        "Lynn SICK Berlin Tokyo London Seattle Berlin",
+        "Chris SICK Tokyo London Tokyo Berlin",
+        "Tyrin RECOVERING Berlin Berlin London Seattle",
+        "Rachel HEALTHY Tokyo Seattle",
+        "Bob RECOVERING London Tokyo Seattle"
+};
+
+// 4 steps
+travelers = new String[]{
+        "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
+        "Lynn SICK Berlin Tokyo London Seattle Berlin",
+        "Chris SICK Tokyo London Tokyo Berlin",
+        "Tyrin RECOVERING Berlin Berlin London Seattle",
+        "Rachel HEALTHY Tokyo Seattle Berlin",
+        "Blob RECOVERING London Tokyo Seattle"
+};
+
