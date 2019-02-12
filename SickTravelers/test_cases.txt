@@ -27,7 +27,7 @@
 "Mary SICK Seattle London Tokyo Berlin",
 "Daren RECOVERING Berlin Berlin London Seattle"
 
-//182 steps.  (it's all Ogre now)
+// 182 steps.  (it's all Ogre now)
 "Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
 "Donkey SICK Berlin Tokyo London Seattle Berlin",
 "Fiona RECOVERING London Seattle Berlin",
@@ -35,3 +35,9 @@
 "Dragon SICK Seattle London Tokyo Berlin",
 "GB_Man HEALTHY Berlin Berlin London Seattle",
 "3LPigs HEALTHY London Seattle",
+
+// 365 steps  (not solveable)
+"David HEALTHY London Tokyo Berlin Tokyo",
+"Lisa RECOVERING Tokyo Berlin London Seattle Berlin",
+"Frank SICK Seattle London Tokyo Berlin",
+"Mary SICK Berlin Tokyo Seattle Tokyo"
