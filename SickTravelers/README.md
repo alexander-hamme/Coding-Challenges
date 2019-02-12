@@ -1,16 +1,18 @@
 # Sick Travelers Challenge
 ### Premise:
 
-A group of independent travelers are traveling around the world. Each day they travel to a new location as per their travel schedule. At the end of their travel schedule, they travel again using the same schedule from the beginning. Some of the travelers are sick. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
+A group of independent travelers are traveling around the world. Each day they travel to a new location as per their travel schedule. At the end of their travel schedule, they travel again using the same schedule from the beginning. 
 
-Each traveler has a name, health condition (either *HEALTHY*, *SICK*, or *RECOVERING*), and a travel schedule (order of locations they are visiting).
+Some of the travelers are sick. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
+
+Each traveler has a name, health condition (either *"HEALTHY"*, *"SICK"*, or *"RECOVERING"*), and a travel schedule (order of locations they are visiting).
 
 Your objective is to trace the health of the travelers until they are all healthy, at which point the program should return the number of days it took to reach this point. If all the travelers do not become healthy within a year (365 days), then the program should stop tracing. 
 
 The travelers transition through their sickness as follows:  
 *HEALTHY*: if exposed to a *SICK/RECOVERING* traveler, becomes *SICK*; otherwise stays *HEALTHY*  
 *SICK*: after one day of staying *SICK*, a traveler enters *RECOVERING* stage. 
-*RECOVERING*: after one day of *RECOVERING*, a traveler becomes *HEALTHY*  
+*RECOVERING*: after one day of *RECOVERING*, a traveler becomes *HEALTHY*
 
 ### Example Input 1:
 ```
@@ -26,7 +28,7 @@ The first line of the input is the number of travelers. Each of the following li
 
 13
 
-Steps to the solution:
+Steps to reach the solution:
 ```
 Lisa           Chris          Mary           Daren         
 (London)       (Berlin)       (Seattle)      (Berlin)       
@@ -93,7 +95,7 @@ Will RECOVERING London Tokyo Seattle
 
 6
 
-Steps to the solution:
+Steps to reach the solution:
 ```
  Marie         Lynn           Chris          Tyrin          Rachel         Will          
 (London)       (Berlin)       (Tokyo)        (Berlin)       (Tokyo)        (London)       
