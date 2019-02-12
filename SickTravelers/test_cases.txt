@@ -27,7 +27,7 @@
 "Mary SICK Seattle London Tokyo Berlin",
 "Daren RECOVERING Berlin Berlin London Seattle"
 
-// 182 steps.  (it's all Ogre now)
+// 182 steps  (it's all Ogre now)
 "Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
 "Donkey SICK Berlin Tokyo London Seattle Berlin",
 "Fiona RECOVERING London Seattle Berlin",
