@@ -129,14 +129,14 @@ public class Solution {
             Traveler traveler = new Traveler(fields[0], Health.valueOf(fields[1]), cities);
 
             if (traveler.isInfectious()) {
-                cities_infected.put(                 // overwrite previous possible status
+                cities_infected.put(                 // overwrite previous possible status with INFECTED
                         traveler.currCity(), CityStatus.INFECTED
                 );
             }
 
-            for (int i=1; i<cities.length; i++) {
-                cities_infected.putIfAbsent(cities[i], CityStatus.NOT_INFECTED);  // don't overwrite previous possible status
-            }
+            for (String city : cities) {
+                cities_infected.putIfAbsent(city, CityStatus.NOT_INFECTED);  // don't overwrite previous possible statuses
+            }                                                                // with NOT_INFECTED
 
             travelers.add(traveler);
         }
