@@ -3,7 +3,7 @@
 
 A group of independent travelers are traveling around the world. Each day they travel to a new location as per their travel schedule. At the end of their travel schedule, they travel again using the same schedule from the beginning. 
 
-Some of the travelers are sick. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
+Some of the travelers are sick, or recovering from illness. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
 
 Each traveler has a name, health condition (either *"HEALTHY"*, *"SICK"*, or *"RECOVERING"*), and a travel schedule (order of locations they are visiting).
 
