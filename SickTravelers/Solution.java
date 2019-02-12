@@ -203,29 +203,13 @@ public class Solution {
     }
 
     public static void main(String[] args) {
-        String[] travelers = {
-                "John HEALTHY Seattle London Seattle Berlin",
-                "Lily RECOVERING Seattle Berlin",
-                "Joanna SICK Berlin Berlin London Tokyo",
-                "Tim RECOVERING Berlin London London Seattle"
+        
+        String[] travelers = new String[]{   // 8 steps
+                "David HEALTHY London Tokyo Berlin Tokyo",
+                "Lisa RECOVERING Tokyo Berlin London Seattle Berlin",
+                "Frank SICK Seattle London Tokyo Berlin",
+                "Mary SICK Berlin Berlin London Seattle"
         };
-
-
-        travelers = new String[]{
-                "John SICK Tokyo Berlin London Seattle Berlin",
-                "Lily RECOVERING Seattle London Tokyo Berlin",
-                "Joanna SICK Seattle Tokyo Berlin Tokyo",
-                "Tim HEALTHY Berlin London London Seattle"
-        };
-
-
-        travelers = new String[]{
-                "John RECOVERING Tokyo Berlin London Seattle Berlin",
-                "Lily SICK Seattle London Tokyo Berlin",
-                "Joanna RECOVERING London Tokyo Berlin Tokyo",
-                "Tim SICK Berlin Berlin London Seattle"
-        };
-
         System.out.println("\n\nSteps required: " + new Solution().solve(travelers));
     }
 }
