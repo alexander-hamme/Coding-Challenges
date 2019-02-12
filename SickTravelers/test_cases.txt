@@ -1,8 +1,18 @@
-// 33 steps
-"Lisa HEALTHY London Tokyo Seattle Berlin Tokyo",
-"Chris SICK Berlin Tokyo London Seattle Berlin",
-"Mary SICK Seattle London Tokyo Berlin",
-"Daren RECOVERING Berlin Berlin London Seattle"
+// 2 steps
+"Jacob SICK Tokyo Madrid Paris"
+
+// 4 steps
+"Marie HEALTHY Madrid Tokyo Beijing Paris Tokyo",
+"Lynn SICK Paris Tokyo Madrid Beijing Paris",
+"Chris SICK Tokyo Madrid Tokyo Paris",
+"Tyrin RECOVERING Paris Paris Madrid Beijing",
+"Rachel HEALTHY Tokyo Beijing Paris",
+"Blob RECOVERING Madrid Tokyo Beijing"
+
+// 5 steps
+"Ronald SICK Tokyo Madrid Tokyo Paris",
+"Mick HEALTHY Seattle Paris Tokyo",
+"Donald SICK Seattle Madrid Paris"
 
 // 9 steps
 "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
@@ -10,6 +20,12 @@
 "Chris SICK Tokyo London Tokyo Berlin",
 "Tyrin RECOVERING Berlin Berlin London Seattle",
 "Rachel HEALTHY Tokyo Seattle",
+
+// 33 steps
+"Lisa HEALTHY London Tokyo Seattle Berlin Tokyo",
+"Chris SICK Berlin Tokyo London Seattle Berlin",
+"Mary SICK Seattle London Tokyo Berlin",
+"Daren RECOVERING Berlin Berlin London Seattle"
 
 //182 steps.  (it's all Ogre now)
 "Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
@@ -19,11 +35,3 @@
 "Dragon SICK Seattle London Tokyo Berlin",
 "GB_Man HEALTHY Berlin Berlin London Seattle",
 "3LPigs HEALTHY London Seattle",
-
-// 4 steps
-"Marie HEALTHY Madrid Tokyo Beijing Paris Tokyo",
-"Lynn SICK Paris Tokyo Madrid Beijing Paris",
-"Chris SICK Tokyo Madrid Tokyo Paris",
-"Tyrin RECOVERING Paris Paris Madrid Beijing",
-"Rachel HEALTHY Tokyo Beijing Paris",
-"Blob RECOVERING Madrid Tokyo Beijing"
