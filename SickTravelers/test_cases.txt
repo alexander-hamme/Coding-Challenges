@@ -1,40 +1,32 @@
 // 33 steps
-travelers = new String[]{
-        "Lisa HEALTHY London Tokyo Seattle Berlin Tokyo",
-        "Chris SICK Berlin Tokyo London Seattle Berlin",
-        "Mary SICK Seattle London Tokyo Berlin",
-        "Daren RECOVERING Berlin Berlin London Seattle"
-};
+"Lisa HEALTHY London Tokyo Seattle Berlin Tokyo",
+"Chris SICK Berlin Tokyo London Seattle Berlin",
+"Mary SICK Seattle London Tokyo Berlin",
+"Daren RECOVERING Berlin Berlin London Seattle"
 
 // 9 steps
-travelers = new String[]{
-        "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
-        "Lynn SICK Berlin Tokyo London Seattle Berlin",
-        "Chris SICK Tokyo London Tokyo Berlin",
-        "Tyrin RECOVERING Berlin Berlin London Seattle",
-        "Rachel HEALTHY Tokyo Seattle",
-};
+"Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
+"Lynn SICK Berlin Tokyo London Seattle Berlin",
+"Chris SICK Tokyo London Tokyo Berlin",
+"Tyrin RECOVERING Berlin Berlin London Seattle",
+"Rachel HEALTHY Tokyo Seattle",
 
 
-//182 steps.  it's all Ogre now
-travelers = new String[]{
-        "Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
-        "Donkey SICK Berlin Tokyo London Seattle Berlin",
-        "Fiona RECOVERING London Seattle Berlin",
-        "Farquaad RECOVERING Tokyo London Seattle Berlin",
-        "Dragon SICK Seattle London Tokyo Berlin",
-        "GB_Man HEALTHY Berlin Berlin London Seattle",
-        "3LPigs HEALTHY London Seattle",
-};
+//182 steps.  (it's all Ogre now)
+"Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
+"Donkey SICK Berlin Tokyo London Seattle Berlin",
+"Fiona RECOVERING London Seattle Berlin",
+"Farquaad RECOVERING Tokyo London Seattle Berlin",
+"Dragon SICK Seattle London Tokyo Berlin",
+"GB_Man HEALTHY Berlin Berlin London Seattle",
+"3LPigs HEALTHY London Seattle",
 
 
 // 4 steps
-travelers = new String[]{
-        "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
-        "Lynn SICK Berlin Tokyo London Seattle Berlin",
-        "Chris SICK Tokyo London Tokyo Berlin",
-        "Tyrin RECOVERING Berlin Berlin London Seattle",
-        "Rachel HEALTHY Tokyo Seattle Berlin",
-        "Blob RECOVERING London Tokyo Seattle"
-};
+"Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
+"Lynn SICK Berlin Tokyo London Seattle Berlin",
+"Chris SICK Tokyo London Tokyo Berlin",
+"Tyrin RECOVERING Berlin Berlin London Seattle",
+"Rachel HEALTHY Tokyo Seattle Berlin",
+"Blob RECOVERING London Tokyo Seattle"
 
