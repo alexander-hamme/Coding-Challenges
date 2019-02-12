@@ -5,7 +5,9 @@ A group of independent travelers are traveling around the world. Each day they t
 
 Each traveler has a name, health condition (either *HEALTHY*, *SICK*, or *RECOVERING*), and a travel schedule (order of locations they are visiting).
 
-Your objective is to trace the health of the travelers until they are all healthy, at which point the program should return the number of days it took to reach this point. If all the travelers do not become healthy within a year (365 days), then the program should stop tracing. The travelers transition through their sickness as follows:  
+Your objective is to trace the health of the travelers until they are all healthy, at which point the program should return the number of days it took to reach this point. If all the travelers do not become healthy within a year (365 days), then the program should stop tracing. 
+
+The travelers transition through their sickness as follows:  
 *HEALTHY*: if exposed to a *SICK/RECOVERING* traveler, becomes *SICK*; otherwise stays *HEALTHY*  
 *SICK*: after one day of staying *SICK*, a traveler enters *RECOVERING* stage. 
 *RECOVERING*: after one day of *RECOVERING*, a traveler becomes *HEALTHY*  
