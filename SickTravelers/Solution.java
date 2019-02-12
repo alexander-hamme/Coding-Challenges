@@ -1,33 +1,31 @@
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Set;
 
-
+/**
+ * This solution, while somewhat extensive, was designed with
+ * the goal of keeping the operations at linear time complexity O(n),
+ * which this solution does.
+ */
 public class Solution {
 
     private final int max_steps = 365;
 
     private ArrayList<Traveler> travelers = new ArrayList<>();
 
-
-    public enum CityStatus {
+    public enum CityStatus {  // unrelated to the INFECTED enum field below
         INFECTED, NOT_INFECTED
     }
 
-
-    // map city name to boolean --> True if it there is a sick or recovering person there,
-    // False if only healthy people are currently there
+    // map city name to current city status. Values get reset at the start of each new day of travel.
     private HashMap<String, CityStatus> cities_infected = new HashMap<>();
 
-
-    public enum Health {
+    private enum Health {
 
         HEALTHY("HEALTHY"),
         RECOVERING("RECOVERING"),
         SICK("SICK"),
-        INFECTED("");                       // extra state
+        INFECTED("");     // extra in-between state, only exists in between calls to Traveler.checkIfInfected() and Traveler.updateHealth()
 
         final String message;
 
@@ -63,36 +61,31 @@ public class Solution {
             this.city_names = cities;
             this.numb_cities = cities.length;
             this.health = h;
-
-            System.out.println(String.format("Traveler: %s, %s, %s", name, health, Arrays.toString(city_names)));
         }
 
-        public void printStatus() {
-            System.out.println(
-                    String.format("%s is in %s and is %s", name, city_names[curr_city], health)
-            );
-        }
-
-        public void checkInfected() {
+        public void checkIfInfected() {
             if (health == Health.HEALTHY) {
                 boolean got_infected = cities_infected.get(city_names[curr_city]) == CityStatus.INFECTED;
                 health = (got_infected) ? Health.INFECTED : Health.HEALTHY;
             }
         }
 
-        public void moveNext() {
+        /**
+         * Updates health to next state. Note that by the time this function is executed,
+         * checkIfInfected() has already been called.
+         */
+        public void moveNext() {  // O(1) operation overall
 
             updateHealth();
 
             curr_city = (curr_city + 1) % numb_cities;
 
-            if (this.isInfectious()) {
+            if (this.isInfectious()) {      // set city status to infected
                 cities_infected.put(city_names[curr_city], CityStatus.INFECTED);    // O(1) operation
             }
-
         }
 
-        public void updateHealth() {
+        public void updateHealth() {  // O(1)
 
             switch (health) {
 
@@ -107,9 +100,9 @@ public class Solution {
                     health = Health.RECOVERING;
                     break;
 
-                case INFECTED:                 // special in-between state. Can NOT infect others in this state.
-                    health = Health.SICK;
-                    break;
+                case INFECTED:                 // special in-between state, exists only between calls to
+                    health = Health.SICK;      // checkIfInfected() and updateHealth().
+                    break;                     // Traveler CANNOT infect others while in this state.
             }
         }
 
@@ -119,6 +112,11 @@ public class Solution {
     }
 
 
+    /**
+     * Called once to construct initial HashMap and add instances of Traveler class
+     * to the `travelers` ArrayList
+     * @param input_strings String array, unchanged from initial input array
+     */
     private void setupValues(String[] input_strings) {
 
         for (String str : input_strings) {
@@ -146,6 +144,8 @@ public class Solution {
 
     private int solve(String[] input_strings) {
 
+        boolean PRINT_OUTPUT = true;
+
         setupValues(input_strings);
 
         Set<String> all_cities = cities_infected.keySet();
@@ -153,77 +153,54 @@ public class Solution {
         int step = 0;
 
         travelers.forEach(traveler -> System.out.print(
-                String.format(" %-14s", traveler.getName()))
+                String.format(" %-15s", traveler.getName()))
         );
         System.out.println();
 
-        while (step < max_steps) {
+        while (step < max_steps) {      // each iteration is just O(n + n + n) = O(n)
 
-            //iterate through travelers, *updating travelers health* and also keeping track if there are any sick
+            if (PRINT_OUTPUT) {
+                travelers.forEach(traveler -> System.out.print(
+                        String.format("%-17s", "(" + traveler.currCity() + ")"))
+                );
+
+                System.out.println();
+                travelers.forEach(traveler -> System.out.print(
+                        String.format("%-17s", traveler.health))
+                );
+
+                System.out.println("\n");
+            }
+
+            // for each traveler, checks if currently at a location that is infected.
+            // this is O(n) because it's just a single HashMap access O(1) for each traveler
+            travelers.forEach(Traveler::checkIfInfected);
 
 
-//            travelers.forEach(traveler -> System.out.print("(" + traveler.currCity() + ")\t"));
-            travelers.forEach(traveler -> System.out.print(
-                    String.format("%-15s", "(" + traveler.currCity() + ")"))
-            );
-
-            System.out.println();
-            travelers.forEach(traveler -> System.out.print(
-                    String.format("%-15s", traveler.health))
-            );
-
-            travelers.forEach(Traveler::checkInfected);
-
+            //*******************************************************************************//
+            // Check if all travelers are healthy
 
             boolean all_healthy = true;
 
-            for (Traveler traveler : travelers) {
+            for (Traveler traveler : travelers) {                  // O(n)
                 if (!traveler.isHealthy()) {
                     all_healthy = false;
                 }
             }
 
-            if (all_healthy) {
-                break;
-            }
-
-            System.out.println();
-
-
-//            System.out.println("\nAfter check for infection");
-//            travelers.forEach(Traveler::printStatus);
+            if (all_healthy) { break; }
+            //*******************************************************************************//
 
 
             // reset all city values before next step
             all_cities.forEach(city -> cities_infected.put(city, CityStatus.NOT_INFECTED));
 
-            /* These two together represent the next timestep */
-
-            //travelers.forEach(Traveler::updateHealth);
-
-//            System.out.println("\nAfter update health");
-//            travelers.forEach(Traveler::printStatus);
-
-
-            travelers.forEach(Traveler::moveNext);
-
-
-            //travelers.forEach(Traveler::checkInfected);
-
-
-
-
+            travelers.forEach(Traveler::moveNext);                  // O(n)
 
             step++;
-
-            System.out.println();
-
         }
-
-
         return step;
     }
-
 
     public static void main(String[] args) {
         String[] travelers = {
