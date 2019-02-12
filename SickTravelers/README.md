@@ -123,4 +123,4 @@ HEALTHY        HEALTHY        HEALTHY        HEALTHY        HEALTHY        HEALT
 Days of travel required: 6
 ```
 
-A few more test cases are in the `test_cases.txt` file, along with the correct number of steps for each. The EmptySolution class is added for those who want to create their own solution to the problem.
+A few more test cases are in the `test_cases.txt` file, along with the correct number of steps for each. The EmptySolution class is added for those who want to create their own solution to the problem in Java, but any language can be used.
