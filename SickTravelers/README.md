@@ -15,48 +15,63 @@ The travelers transition through their sickness as follows:
 ### Example Input 1:
 ```
 4
-Chris RECOVERING London Tokyo Berlin Tokyo
-Marie RECOVERING Tokyo Berlin London Seattle Berlin
-Rachel SICK Seattle London Tokyo Berlin
-Matt SICK Berlin Berlin London Seattle
+Lisa HEALTHY London Tokyo Seattle Berlin Tokyo
+Chris SICK Berlin Tokyo London Seattle Berlin
+Mary SICK Seattle London Tokyo Berlin
+Daren HEALTHY Berlin Berlin London Seattle
 ```
 The first line of the input is the number of travelers. Each of the following lines corresponds to a single traveler. Each line has the traveler's name, health and travel locations separated by single spaces. The travel locations make up the traveler's schedule in order.
 
 ### Output:  
 
-8
+13
 
 Steps to the solution:
 ```
- Chris          Marie          Rachel         Matt           
-(London)       (Tokyo)        (Seattle)      (Berlin)       
-RECOVERING     RECOVERING      SICK           SICK           
-
-(Tokyo)        (Berlin)       (London)       (Berlin)       
-HEALTHY        HEALTHY        RECOVERING     RECOVERING     
-
-(Berlin)       (London)       (Tokyo)        (London)       
-HEALTHY        SICK           HEALTHY        HEALTHY        
-
-(Tokyo)        (Seattle)      (Berlin)       (Seattle)      
-HEALTHY        RECOVERING     HEALTHY        SICK           
-
+Lisa           Chris          Mary           Daren         
 (London)       (Berlin)       (Seattle)      (Berlin)       
-HEALTHY        HEALTHY        HEALTHY        RECOVERING     
+HEALTHY        SICK           SICK           HEALTHY        
 
 (Tokyo)        (Tokyo)        (London)       (Berlin)       
-HEALTHY        SICK           HEALTHY        HEALTHY        
+HEALTHY        RECOVERING     RECOVERING     SICK           
 
-(Berlin)       (Berlin)       (Tokyo)        (London)       
-SICK           RECOVERING     HEALTHY        HEALTHY        
+(Seattle)      (London)       (Tokyo)        (London)       
+SICK           HEALTHY        HEALTHY        RECOVERING     
 
-(Tokyo)        (London)       (Berlin)       (Seattle)      
-RECOVERING     HEALTHY        HEALTHY        HEALTHY        
+(Berlin)       (Seattle)      (Berlin)       (Seattle)      
+RECOVERING     SICK           HEALTHY        HEALTHY        
 
-(London)       (Seattle)      (Seattle)      (Berlin)       
-HEALTHY        HEALTHY        HEALTHY        HEALTHY              
+(Tokyo)        (Berlin)       (Seattle)      (Berlin)       
+HEALTHY        RECOVERING     SICK           SICK           
 
-Days of traveling required: 8
+(London)       (Berlin)       (London)       (Berlin)       
+HEALTHY        HEALTHY        RECOVERING     RECOVERING     
+
+(Tokyo)        (Tokyo)        (Tokyo)        (London)       
+SICK           SICK           HEALTHY        HEALTHY        
+
+(Seattle)      (London)       (Berlin)       (Seattle)      
+RECOVERING     RECOVERING     SICK           HEALTHY        
+
+(Berlin)       (Seattle)      (Seattle)      (Berlin)       
+HEALTHY        HEALTHY        RECOVERING     SICK           
+
+(Tokyo)        (Berlin)       (London)       (Berlin)       
+SICK           SICK           HEALTHY        RECOVERING     
+
+(London)       (Berlin)       (Tokyo)        (London)       
+RECOVERING     RECOVERING     HEALTHY        HEALTHY        
+
+(Tokyo)        (Tokyo)        (Berlin)       (Seattle)      
+HEALTHY        HEALTHY        HEALTHY        SICK           
+
+(Seattle)      (London)       (Seattle)      (Berlin)       
+HEALTHY        HEALTHY        HEALTHY        RECOVERING     
+
+(Berlin)       (Seattle)      (London)       (Berlin)       
+HEALTHY        HEALTHY        HEALTHY        HEALTHY        
+
+Days of travel required: 13
 ```
 
 
@@ -102,7 +117,7 @@ RECOVERING     HEALTHY        HEALTHY        HEALTHY        HEALTHY        HEALT
 (Seattle)      (Tokyo)        (Tokyo)        (London)       (Tokyo)        (London)       
 HEALTHY        HEALTHY        HEALTHY        HEALTHY        HEALTHY        HEALTHY
 
-Steps required: 6
+Days of travel required: 6
 ```
 
 A few more test cases are in the `test_cases.txt` file, along with the correct number of steps for each
