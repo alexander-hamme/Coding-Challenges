@@ -5,7 +5,9 @@ import java.util.Set;
 /**
  * This solution, while somewhat extensive, was designed with
  * the goal of keeping the operations at linear time complexity O(n),
- * which this solution does.
+ * which this solution does. 
+ * 
+ * Total time complexity of each travel timestep is O(n + n + n) = O(n). 
  */
 public class Solution {
 
