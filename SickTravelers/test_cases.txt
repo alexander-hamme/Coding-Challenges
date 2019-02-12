@@ -11,7 +11,6 @@
 "Tyrin RECOVERING Berlin Berlin London Seattle",
 "Rachel HEALTHY Tokyo Seattle",
 
-
 //182 steps.  (it's all Ogre now)
 "Shrek HEALTHY London Tokyo Seattle Berlin Tokyo",
 "Donkey SICK Berlin Tokyo London Seattle Berlin",
@@ -21,7 +20,6 @@
 "GB_Man HEALTHY Berlin Berlin London Seattle",
 "3LPigs HEALTHY London Seattle",
 
-
 // 4 steps
 "Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
 "Lynn SICK Berlin Tokyo London Seattle Berlin",
@@ -29,4 +27,3 @@
 "Tyrin RECOVERING Berlin Berlin London Seattle",
 "Rachel HEALTHY Tokyo Seattle Berlin",
 "Blob RECOVERING London Tokyo Seattle"
-
