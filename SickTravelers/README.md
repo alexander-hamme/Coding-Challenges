@@ -22,9 +22,9 @@ Matt SICK Berlin Berlin London Seattle
 ```
 The first line of the input is the number of travelers. Each of the following lines corresponds to a single traveler. Each line has the traveler's name, health and travel locations separated by single spaces. The travel locations make up the traveler's schedule in order.
 
-### Desired Output:  
+### Output:  
 
-`8`
+8
 
 Steps to the solution:
 ```
@@ -74,9 +74,9 @@ Rachel HEALTHY Tokyo Seattle Berlin",
 Will RECOVERING London Tokyo Seattle"
 ```
 
-### Desired Output: 
+### Output: 
 
-```6```
+6
 
 Steps to the solution:
 ```
