@@ -28,9 +28,9 @@ The first line of the input is the number of travelers. Each of the following li
 
 Steps to the solution:
 ```
- Chris          Marie           Rachel         Matt           
+ Chris          Marie          Rachel         Matt           
 (London)       (Tokyo)        (Seattle)      (Berlin)       
-RECOVERING     RECOVERING     SICK           SICK           
+RECOVERING     RECOVERING      SICK           SICK           
 
 (Tokyo)        (Berlin)       (London)       (Berlin)       
 HEALTHY        HEALTHY        RECOVERING     RECOVERING     
@@ -80,9 +80,9 @@ Will RECOVERING London Tokyo Seattle"
 
 Steps to the solution:
 ```
- Marie          Lynn           Chris          Tyrin          Rachel         Will          
+ Marie         Lynn           Chris          Tyrin          Rachel         Will          
 (London)       (Berlin)       (Tokyo)        (Berlin)       (Tokyo)        (London)       
-HEALTHY        SICK           SICK           RECOVERING     HEALTHY        RECOVERING     
+HEALTHY         SICK           SICK          RECOVERING     HEALTHY        RECOVERING     
 
 (Tokyo)        (Tokyo)        (London)       (Berlin)       (Seattle)      (Tokyo)        
 SICK           RECOVERING     RECOVERING     HEALTHY        SICK           HEALTHY        
