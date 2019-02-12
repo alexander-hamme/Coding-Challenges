@@ -3,16 +3,16 @@
 
 A group of independent travelers are traveling around the world. Each day they travel to a new location as per their travel schedule. At the end of their travel schedule, they travel again using the same schedule from the beginning. 
 
-Some of the travelers are sick, or recovering from illness. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
+Some of the travelers are sick or recovering from illness. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
 
 Each traveler has a name, health condition (either *"HEALTHY"*, *"SICK"*, or *"RECOVERING"*), and a travel schedule (order of locations they are visiting).
-
-Your objective is to trace the health of the travelers until they are all healthy, at which point the program should return the number of days it took to reach this point. If all the travelers do not become healthy within a year (365 days), then the program should stop tracing. 
 
 The travelers transition through their sickness as follows:  
 *HEALTHY*: if exposed to a *SICK/RECOVERING* traveler, becomes *SICK*; otherwise stays *HEALTHY*  
 *SICK*: after one day of staying *SICK*, a traveler enters *RECOVERING* stage. 
 *RECOVERING*: after one day of *RECOVERING*, a traveler becomes *HEALTHY*
+
+Your objective is to trace the health of the travelers until they are all healthy, at which point the program should return the number of days it took to reach this point. If all the travelers do not become healthy within a year (365 days), then the program should stop tracing. 
 
 ### Example Input 1:
 ```
