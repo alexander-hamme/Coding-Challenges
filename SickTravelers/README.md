@@ -15,9 +15,9 @@ The travelers transition through their sickness as follows:
 ### Example Input:
 ```
 4
-Lily SICK Seattle London Tokyo Berlin
 Joanna RECOVERING London Tokyo Berlin Tokyo
 John RECOVERING Tokyo Berlin London Seattle Berlin
+Lily SICK Seattle London Tokyo Berlin
 Tim SICK Berlin Berlin London Seattle
 ```
 The first line of the input is the number of travelers. Each of the following lines corresponds to a single traveler. Each line has the traveler's name, health and travel locations separated by single spaces. The travel locations make up the traveler's schedule in order.
@@ -28,33 +28,33 @@ The first line of the input is the number of travelers. Each of the following li
 
 Steps to solve the above input:
 ```
- John           Lily           Joanna         Tim           
-(Tokyo)        (Seattle)      (London)       (Berlin)       
-RECOVERING      SICK           RECOVERING     SICK           
+ Joanna         John           Lily           Tim           
+(London)       (Tokyo)        (Seattle)      (Berlin)       
+RECOVERING     RECOVERING     SICK           SICK           
 
-(Berlin)       (London)       (Tokyo)        (Berlin)       
-HEALTHY        RECOVERING     HEALTHY        RECOVERING     
+(Tokyo)        (Berlin)       (London)       (Berlin)       
+HEALTHY        HEALTHY        RECOVERING     RECOVERING     
 
-(London)       (Tokyo)        (Berlin)       (London)       
-SICK           HEALTHY        HEALTHY        HEALTHY        
+(Berlin)       (London)       (Tokyo)        (London)       
+HEALTHY        SICK           HEALTHY        HEALTHY        
 
-(Seattle)      (Berlin)       (Tokyo)        (Seattle)      
-RECOVERING     HEALTHY        HEALTHY        SICK           
+(Tokyo)        (Seattle)      (Berlin)       (Seattle)      
+HEALTHY        RECOVERING     HEALTHY        SICK           
 
-(Berlin)       (Seattle)      (London)       (Berlin)       
+(London)       (Berlin)       (Seattle)      (Berlin)       
 HEALTHY        HEALTHY        HEALTHY        RECOVERING     
 
-(Tokyo)        (London)       (Tokyo)        (Berlin)       
-SICK           HEALTHY        HEALTHY        HEALTHY        
+(Tokyo)        (Tokyo)        (London)       (Berlin)       
+HEALTHY        SICK           HEALTHY        HEALTHY        
 
-(Berlin)       (Tokyo)        (Berlin)       (London)       
-RECOVERING     HEALTHY        SICK           HEALTHY        
+(Berlin)       (Berlin)       (Tokyo)        (London)       
+SICK           RECOVERING     HEALTHY        HEALTHY        
 
-(London)       (Berlin)       (Tokyo)        (Seattle)      
-HEALTHY        HEALTHY        RECOVERING     HEALTHY        
+(Tokyo)        (London)       (Berlin)       (Seattle)      
+RECOVERING     HEALTHY        HEALTHY        HEALTHY        
 
-(Seattle)      (Seattle)      (London)       (Berlin)       
-HEALTHY        HEALTHY        HEALTHY        HEALTHY        
+(London)       (Seattle)      (Seattle)      (Berlin)       
+HEALTHY        HEALTHY        HEALTHY        HEALTHY              
 
 Days of traveling required: 8
 ```
