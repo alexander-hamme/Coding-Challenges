@@ -11,7 +11,7 @@ import java.util.Set;
  */
 public class Solution {
 
-    private final int max_steps = 365;
+    private static final int MAX_STEPS = 365;
 
     private ArrayList<Traveler> travelers = new ArrayList<>();
 
@@ -179,7 +179,7 @@ public class Solution {
         );
         System.out.println();
 
-        while (step < max_steps) {      // each iteration is just O(n + n + n) = O(n)
+        while (step < MAX_STEPS) {      // each iteration is just O(n + n + n) = O(n)
 
             // not included in time complexity calculation
             if (PRINT_OUTPUT) { printTravelers(); }
