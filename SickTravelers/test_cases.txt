@@ -21,9 +21,9 @@
 "3LPigs HEALTHY London Seattle",
 
 // 4 steps
-"Marie HEALTHY London Tokyo Seattle Berlin Tokyo",
-"Lynn SICK Berlin Tokyo London Seattle Berlin",
-"Chris SICK Tokyo London Tokyo Berlin",
-"Tyrin RECOVERING Berlin Berlin London Seattle",
-"Rachel HEALTHY Tokyo Seattle Berlin",
-"Blob RECOVERING London Tokyo Seattle"
+"Marie HEALTHY Madrid Tokyo Beijing Paris Tokyo",
+"Lynn SICK Paris Tokyo Madrid Beijing Paris",
+"Chris SICK Tokyo Madrid Tokyo Paris",
+"Tyrin RECOVERING Paris Paris Madrid Beijing",
+"Rachel HEALTHY Tokyo Beijing Paris",
+"Blob RECOVERING Madrid Tokyo Beijing"
