@@ -64,6 +64,10 @@ public class Solution {
             this.numb_cities = cities.length;
             this.health = h;
         }
+        
+        public boolean isHealthy() {
+            return health == Health.HEALTHY;
+        }
 
         public void checkIfInfected() {
             if (health == Health.HEALTHY) {
@@ -107,12 +111,28 @@ public class Solution {
                     break;                     // Traveler CANNOT infect others while in this state.
             }
         }
-
-        public boolean isHealthy() {
-            return health == Health.HEALTHY;
-        }
     }
 
+    private boolean allAreHealthy() {         // O(n)
+        for (Traveler traveler : travelers) {
+            if (!traveler.isHealthy()) {
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    private void printTravelers() {
+        travelers.forEach(traveler -> System.out.print(
+                String.format("%-17s", "(" + traveler.currCity() + ")"))
+        );
+
+        System.out.println();
+        travelers.forEach(traveler -> System.out.print(
+                String.format("%-17s", traveler.health))
+        );
+        System.out.println("\n");
+    }
 
     /**
      * Called once to construct initial HashMap and add instances of Traveler class
@@ -144,7 +164,7 @@ public class Solution {
         }
     }
 
-    private int solve(String[] input_strings) {
+    private int solveTrip(String[] input_strings) {
 
         boolean PRINT_OUTPUT = true;
 
@@ -161,38 +181,15 @@ public class Solution {
 
         while (step < max_steps) {      // each iteration is just O(n + n + n) = O(n)
 
-            if (PRINT_OUTPUT) {
-                travelers.forEach(traveler -> System.out.print(
-                        String.format("%-17s", "(" + traveler.currCity() + ")"))
-                );
-
-                System.out.println();
-                travelers.forEach(traveler -> System.out.print(
-                        String.format("%-17s", traveler.health))
-                );
-
-                System.out.println("\n");
-            }
+            // not included in time complexity calculation
+            if (PRINT_OUTPUT) { printTravelers(); }
 
             // for each traveler, checks if currently at a location that is infected.
             // this is O(n) because it's just a single HashMap access O(1) for each traveler
-            travelers.forEach(Traveler::checkIfInfected);
+            travelers.forEach(Traveler::checkIfInfected);           // O(n)
 
-
-            //*******************************************************************************//
             // Check if all travelers are healthy
-
-            boolean all_healthy = true;
-
-            for (Traveler traveler : travelers) {                  // O(n)
-                if (!traveler.isHealthy()) {
-                    all_healthy = false;
-                }
-            }
-
-            if (all_healthy) { break; }
-            //*******************************************************************************//
-
+            if (this.allAreHealthy()) { break; }                    // O(n)
 
             // reset all city values before next step
             all_cities.forEach(city -> cities_infected.put(city, CityStatus.NOT_INFECTED));
@@ -203,6 +200,10 @@ public class Solution {
         }
         return step;
     }
+    
+    public static int solve(String[] inputLines) {
+        return new Solution().solveTrip(inputLines);
+    }
 
     public static void main(String[] args) {
         
@@ -212,7 +213,7 @@ public class Solution {
                 "Frank SICK Seattle London Tokyo Berlin",
                 "Mary SICK Berlin Berlin London Seattle"
         };
-        System.out.println("\n\nSteps required: " + new Solution().solve(travelers));
+        System.out.println("\n\nSteps required: " + solve(travelers));
     }
 }
 
