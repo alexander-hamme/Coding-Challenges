@@ -1,5 +1,5 @@
 # Sick Travelers Challenge
-## Premise:
+### Premise:
 
 A group of independent travelers are traveling around the world. Each day they travel to a new location as per their travel schedule. At the end of their travel schedule, they travel again using the same schedule from the beginning. Some of the travelers are sick. If a healthy traveler is at the same location as a sick or recovering traveler, they will also become sick.
 
@@ -12,7 +12,7 @@ The travelers transition through their sickness as follows:
 *SICK*: after one day of staying *SICK*, a traveler enters *RECOVERING* stage. 
 *RECOVERING*: after one day of *RECOVERING*, a traveler becomes *HEALTHY*  
 
-## Example Input:
+### Example Input:
 ```
 4
 Lily SICK Seattle London Tokyo Berlin
@@ -22,11 +22,11 @@ Tim SICK Berlin Berlin London Seattle
 ```
 The first line of the input is the number of travelers. Each of the following lines corresponds to a single traveler. Each line has the traveler's name, health and travel locations separated by single spaces. The travel locations make up the traveler's schedule in order.
 
-## Desired Output:  
+### Desired Output:  
 
 `8`
 
-The following are the travel steps for solving the above input.
+Steps to solve the above input:
 ```
  John           Lily           Joanna         Tim           
 (Tokyo)        (Seattle)      (London)       (Berlin)       
