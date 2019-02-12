@@ -66,12 +66,12 @@ Days of traveling required: 8
 
 ```
 6
-Marie HEALTHY London Tokyo Seattle London",
-Lynn SICK Berlin Tokyo London Seattle Berlin",
-Chris SICK Tokyo London Tokyo Berlin",
-Tyrin RECOVERING Berlin Berlin London Seattle",
-Rachel HEALTHY Tokyo Seattle Berlin",
-Will RECOVERING London Tokyo Seattle"
+Marie HEALTHY London Tokyo Seattle London
+Lynn SICK Berlin Tokyo London Seattle Berlin
+Chris SICK Tokyo London Tokyo Berlin
+Tyrin RECOVERING Berlin Berlin London Seattle
+Rachel HEALTHY Tokyo Seattle Berlin
+Will RECOVERING London Tokyo Seattle
 ```
 
 ### Output: 
