@@ -204,6 +204,7 @@ public class Solution {
         return step;
     }
     
+    // this function is static for compatibility with the JUnit Test Cases on HackerRank
     public static int solve(String[] inputLines) {
         return new Solution().solveTrip(inputLines);
     }
