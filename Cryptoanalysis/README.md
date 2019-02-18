@@ -1,12 +1,12 @@
 ### Task
 
-Given a piece of text encoded with a simple alphabetic substitution cipher, use basic cryptanalytic techniques to recover the original plain text. You will be provided with a special dictionary file that you can read from dictionary.lst. It will consist of one word per line.
+Given a piece of text encoded with a simple alphabetic substitution cipher, use basic cryptanalytic techniques to recover the original plain text. You will be provided with a special dictionary file that you can read in from `"dictionary.lst"`. It will consist of one word per line.
 
-Note: the cipher is *not* a **monoalphabetic** cipher, which uses fixed substitution over the entire message (i.e. shifting all letters in the alphabet by the same number). The cipher does have a one-to-one mapping of all characters, but the mapping is not defined by a simple rule. It is up to you to find it using the input cipher words and the list of real words from the dictionary.lst file.
+Note: the cipher is *not* a **monoalphabetic** cipher, which uses fixed substitution over the entire message (i.e. shifting all letters in the alphabet by the same number). The cipher does have a one-to-one mapping of all characters, but the mapping is not defined by a simple rule. It is up to you to find it using the input cipher words and the list of real words from the `dictionary.lst` file.
 
 ### Input Format
 
-The input ciphertext will consist of a string of space separated enciphered words from the provided dictionary.lst file that is accessible to your code. The dictionary contains technical jargon and may not be entirely representative of English language plain text, so frequency analysis techniques may not be entirely helpful.
+The input ciphertext will consist of a string of space separated enciphered words from the provided `dictionary.lst` file that is accessible to your code. The dictionary contains technical jargon and may not be entirely representative of English language plain text, so frequency analysis techniques may not be entirely helpful.
 
 ### Constraints
 
