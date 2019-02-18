@@ -1,4 +1,4 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
+# Read input from STDIN. Print output to STDOUT
 from typing import Dict, List
 import re
 
