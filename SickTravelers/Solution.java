@@ -177,10 +177,12 @@ public class Solution {
 
         int step = 0;
 
-        travelers.forEach(traveler -> System.out.print(
+        if (PRINT_OUTPUT) {
+            travelers.forEach(traveler -> System.out.print(
                 String.format(" %-15s", traveler.getName()))
-        );
-        System.out.println();
+            );
+            System.out.println();
+        }
 
         while (step < MAX_STEPS) {      // each iteration is just O(n + n + n) = O(n)
 
