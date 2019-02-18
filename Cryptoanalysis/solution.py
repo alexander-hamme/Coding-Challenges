@@ -52,7 +52,7 @@ def mapWordsToLengths(full_words_list) -> Dict[int, List[str]]:
     return dct_word_counts
 
 
-# check current char map against list of real words
+# use current char map to decipher words and check against list of real words
 def checkCipherOnWords(char_map : Dict[str, str], cipher_words, real_words) -> bool:
     for word in cipher_words:
         deciphered = ''.join([char_map.get(c) for c in word])
@@ -69,30 +69,34 @@ def checkCipherOnWords(char_map : Dict[str, str], cipher_words, real_words) -> b
 
 def getCharMap(cipher_words : List[str], full_words_list : List[str]) -> int:
 
+    # create the smallest subset of words from `cipher_words` that contains all 26 letters
     all_ltrs_cphr = {}
     for wrd in cipher_words:
         for ltr in alphabet:
             if ltr in wrd and not ltr in all_ltrs_cphr:
-                # assign multiple letters to the same word whenever possible
+                # assigns multiple letters to the same word when possible
                 all_ltrs_cphr[ltr] = wrd
 
-    dct_word_counts = mapWordsToLengths(full_words_list)
+    words_sub_set = list(set(all_ltrs_cphr.values()))  # a list of *at most* 26 words
 
     real_words_to_check = []
-
-    words_sub_set = list(set(all_ltrs_cphr.values()))  # a list of *at most* 26 words
+    dct_word_counts = mapWordsToLengths(full_words_list)
     
-    # create the smallest possible subset of `full_words_list` which contains all 
-    # possible matches for the words in `words_sub_set`
+    # create the smallest possible subset of words from `full_words_list` which contains 
+    # all possible matches for the words in `words_sub_set`
     for wrd in words_sub_set:
         real_words_to_check.extend(
             [w for w in dct_word_counts.get(len(wrd), []) if isomorphic(w, wrd)]
         )
 
-    # add verified character mappings bit by bit 
+    # add verified character mappings bit by bit as they are discovered
     verifiedMappings = {}
     
     for word in words_sub_set:
+		
+		# if verifiedMappings contains mappings for all 26 letters
+        if len(verifiedMappings) == 26 and all([v != '.' for v in verifiedMappings.items()]):
+            break
 
         same_len_wrds = dct_word_counts.get(len(word))
         iso_words = [w for w in same_len_wrds if isomorphic(word, w)]
@@ -138,5 +142,4 @@ if __name__ == "__main__":
         print(ciphertext)
     else:
         print(' '.join(decipher(ciphertext, full_words_list)))
-
 
