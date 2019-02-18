@@ -18,15 +18,16 @@ def isomorphic(w1 : str, w2 : str) -> bool:
     if len(w1) != len(w2):
         return False
 
-    char1_maps = {}
-    char2_occurrences = set()
-
-    # iterate through corresponding chars in words 1 and 2
+    # iterate through corresponding chars in words 1 and 2.
     # if a given char has not appeared before in word1 (i.e. does not have an entry in char1_maps),
     # but it has already been seen in word 2 (already exists in char2_occurrences),
     # then they are not isomorphic.
     # otherwise, if a char already exists in char1_maps, check that its mapped value
     # matches the corresponding char in word2.
+
+    char1_maps = {}
+    char2_occurrences = set()
+
     for char1, char2 in zip(w1, w2):
         if not char1 in char1_maps:
             if char2 in char2_occurrences:  # char1 has not appeared before in word1,
@@ -37,11 +38,10 @@ def isomorphic(w1 : str, w2 : str) -> bool:
         else:
             if char1_maps.get(char1) != char2: # previously mapped value does not match
                 return False
-
     return True
 
 
-def mapWordsToLengths(full_words_list) -> Dict[int, List[str]]:
+def mapWordsToLengths(full_words_list : List[str]) -> Dict[int, List[str]]:
     dct_word_counts = {}
     for word in full_words_list:
         len_key = len(word)
@@ -53,7 +53,7 @@ def mapWordsToLengths(full_words_list) -> Dict[int, List[str]]:
 
 
 # use current char map to decipher words and check against list of real words
-def checkCipherOnWords(char_map : Dict[str, str], cipher_words, real_words) -> bool:
+def checkCipherOnWords(char_map : Dict[str, str], cipher_words : List[str], real_words : List[str]) -> bool:
     for word in cipher_words:
         deciphered = ''.join([char_map.get(c) for c in word])
         
@@ -118,7 +118,7 @@ def getCharMap(cipher_words : List[str], full_words_list : List[str]) -> int:
     return verifiedMappings
 
 
-def decipher(ciphertext, full_words_list):
+def decipher(ciphertext : str, full_words_list : List[str]):
 
     cipher_words = [w.strip() for w in ciphertext.split()]
 
