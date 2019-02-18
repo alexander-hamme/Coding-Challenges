@@ -11,11 +11,12 @@ The input ciphertext will consist of a string of space separated enciphered word
 ### Constraints
 
 1 ≤ words in dictionary.lst ≤ 1700
+
 1 ≤ words in input ≤ 100
 
 ### Output Format
 
-Output the decrypted plain text. The output will be a string of space separated words from the provided dictionary. You'll be scored based on how accurately you recover the original text.
+Output the decrypted plain text to `stdout`. The output will be a string of space separated words from the provided dictionary. You'll be scored based on how accurately you recover the original text.
 
 ### Sample Input
 
