@@ -16,7 +16,7 @@ The input ciphertext will consist of a string of space separated enciphered word
 
 ### Output Format
 
-Output the decrypted plain text to `stdout`. The output should be a string of space separated words that all occur in the provided dictionary. You'll be scored based on how accurately you recover the original text.
+Output the decrypted plain text to *stdout*. The output should be a string of space separated words that all occur in the provided dictionary. You'll be scored based on how accurately you recover the original text.
 
 ### Sample Input
 
