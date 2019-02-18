@@ -123,8 +123,8 @@ def decipher(ciphertext, full_words_list):
     cipher_words = [w.strip() for w in ciphertext.split()]
 
     charMap = getCharMap(cipher_words, 
-            [line.lower().strip() for line in full_words_list
-        ])
+            [line.lower().strip() for line in full_words_list]
+	)
 
     deciphered_words = [
         ''.join([charMap.get(c) for c in word]) for word in cipher_words
