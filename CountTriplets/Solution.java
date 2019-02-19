@@ -20,6 +20,7 @@ import static java.util.stream.Collectors.toList;
  *                 for taking too long
  *
  * countTriplets1, the O(n^3) brute force solution that passed maybe 5 tests
+ *                 before timing out on the rest
  */
 public class Solution {
 
