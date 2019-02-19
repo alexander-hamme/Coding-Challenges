@@ -136,11 +136,11 @@ def decipher(ciphertext : str, full_words_list : List[str]):
 if __name__ == "__main__":
 
     ciphertext = input()
-    with open("dictionary.lst", "r") as f:
-        full_words_list = f.readlines()
 
-    if (ciphertext in ('', '\n', '\t')):
-        print(ciphertext)
-    else:
+    if len(ciphertext) > 0:
+		
+	with open("dictionary.lst", "r") as f:
+            full_words_list = f.readlines()
+
         print(' '.join(decipher(ciphertext, full_words_list)))
 
