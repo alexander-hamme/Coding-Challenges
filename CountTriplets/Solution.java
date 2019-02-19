@@ -10,12 +10,23 @@ import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
+/**
+ * To pass not just most, but all of HackerRank's unit tests for this challenge, 
+ * which have strict time limits, I ended up making three solutions:
+ * 
+ * countTriplets3, the O(n) solution that finally passed all the tests
+ 
+ * countTriplets2, the O(n*k*j) solution that passed 10/13 tests but failed 3 
+ *                 for taking too long
+ *
+ * countTriplets1, the O(n^3) brute force solution that passed maybe 5 tests
+ */
 public class Solution {
 
     // O(n) solution. Increases the count retroactively upon reaching
     // each third tuple value, instead of searching forward from each
-    // first value to find the second and third values.
-    static long countTriplets(List<Long> lst, long r) {
+    // would-be first value to find second and third values.
+    static long countTriplets3(List<Long> lst, long r) {
 
         HashMap<Long,Long> seconds = new HashMap<>();
         HashMap<Long,Long> thirds = new HashMap<>();
@@ -46,8 +57,9 @@ public class Solution {
         return count;
     }
 
-    // Worst case O(n^2)
-    static long countTriplets1(List<Long> lst, long r) {
+    // O(n*k*j + n) Creates (number->[arr indices]) hashmap, then iterates
+    // through indices to count occurrences of geometric triplets
+    static long countTriplets2(List<Long> lst, long r) {
 
         HashMap<Long, ArrayList<Integer>> number_counts = new HashMap<>(lst.size());
 
@@ -68,12 +80,12 @@ public class Solution {
         int tuple_count = 0;
 
         int indx1 = 0;
-        for (Long numb1 : lst) {
+        for (Long numb1 : lst) {  // let k = indices2.size, j = indices3.size, then this is O(n*k*j)
 
             Long mult2 = numb1 * r;
             Long mult3 = numb1 * r * r;
 
-            ArrayList<Integer> indices2 = number_counts.get(mult2);
+            ArrayList<Integer> indices2 = number_counts.get(mult2);  
             ArrayList<Integer> indices3 = number_counts.get(mult3);
 
             if (indices2 != null && indices3 != null) {
@@ -97,9 +109,9 @@ public class Solution {
 
 
     // Brute force, O(n^3)
-    static long countTriplets2(List<Long> lst, long r) {
+    static long countTriplets1(List<Long> lst, long r) {
 
-        // convert to array for quicler access
+        // convert to array for quicker access
         Long[] arr = new Long[lst.size()];
         lst.toArray(arr);
 
@@ -147,7 +159,7 @@ public class Solution {
             .map(Long::parseLong)
             .collect(toList());
 
-        long ans = countTriplets(arr, r);
+        long ans = countTriplets3(arr, r);
 
         bufferedWriter.write(String.valueOf(ans));
         bufferedWriter.newLine();
