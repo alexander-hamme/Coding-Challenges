@@ -16,7 +16,7 @@ countTriplets has the following parameter(s):
 ### Input Format
 
 The first line contains two space-separated integers `n` and `r`, the size of `arr` and the common ratio. 
-The next line contains `n` space-seperated integers `arr[i]`.
+The next line contains `n` space-separated integers `arr[i]`.
 
 ### Constraints
 
