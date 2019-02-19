@@ -101,17 +101,17 @@ public class Solution {
                 case HEALTHY:
                     break;
 
-                case RECOVERING:
-                    health = Health.HEALTHY;
-                    break;
+                case INFECTED:                 // special in-between state, exists only between calls to
+                    health = Health.SICK;      // checkIfInfected() and updateHealth().
+                    break;                     // Traveler CANNOT infect others while in this state.
 
                 case SICK:
                     health = Health.RECOVERING;
                     break;
-
-                case INFECTED:                 // special in-between state, exists only between calls to
-                    health = Health.SICK;      // checkIfInfected() and updateHealth().
-                    break;                     // Traveler CANNOT infect others while in this state.
+                    
+                case RECOVERING:
+                    health = Health.HEALTHY;
+                    break;
             }
         }
     }
