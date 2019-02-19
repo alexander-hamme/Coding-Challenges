@@ -30,11 +30,9 @@ Return the count of triplets that form a geometric progression.
 
 ### Sample Input 1
 
-`
-4 2
+`4 2`
 
-1 2 2 4
-`
+`1 2 2 4`
 
 ### Sample Output 1
 
@@ -45,11 +43,9 @@ Explanation: There are 2 triplets satisfying our criteria, whose indices are `(0
 
 ### Sample Input 2
 
-`
-6 3
+`6 3`
 
-1 3 9 9 27 81
-`
+`1 3 9 9 27 81`
 
 ### Sample Output 2
 
@@ -60,11 +56,10 @@ Explanation: Triplets satisfying our criteria are at indices `(0,1,2)`, `(0,1,3)
 
 ### Sample Input 3
 
-`
-5 5
 
-1 5 5 25 125
-`
+`5 5`
+
+`1 5 5 25 125`
 
 ### Sample Output 3
 
