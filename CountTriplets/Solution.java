@@ -57,7 +57,8 @@ public class Solution {
         return count;
     }
 
-    // O(n*k*j + n) Creates (number->[arr indices]) hashmap, then iterates
+    // O(n*k*j + n) --> (probably ends up being around O(n^2)). 
+    // Creates (number->[arr indices]) hashmap, then iterates
     // through indices to count occurrences of geometric triplets
     static long countTriplets2(List<Long> lst, long r) {
 
@@ -80,7 +81,7 @@ public class Solution {
         int tuple_count = 0;
 
         int indx1 = 0;
-        for (Long numb1 : lst) {  // let k = indices2.size, j = indices3.size, then this is O(n*k*j)
+        for (Long numb1 : lst) {  // let k = average indices2.size, j = average indices3.size, then this is O(n*k*j)
 
             Long mult2 = numb1 * r;
             Long mult3 = numb1 * r * r;
