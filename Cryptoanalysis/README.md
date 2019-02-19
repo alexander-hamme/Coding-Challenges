@@ -2,7 +2,7 @@
 
 Given a piece of text encoded with a simple alphabetic substitution cipher, use basic cryptoanalytic techniques to recover the original plain text. You will be provided with a special dictionary file that you can read in from `"dictionary.lst"`. It will consist of one word per line.
 
-Note: the cipher is *not* a **monoalphabetic** cipher, which uses fixed substitution over the entire message (i.e. shifting all letters in the alphabet by the same number). The cipher does have a one-to-one mapping of all characters, but the mapping is not defined by a simple rule. It is up to you to find it using the input cipher words and the list of real words from the `dictionary.lst` file.
+Note: while the cipher *is* a monoalphabetic cipher, it is *not* the simplest kind of monoalphabetic cipher that just shifts all letters in the alphabet by the same number. This cipher has a one-to-one mapping of all characters, but the mapping is not defined by a simple rule. It is up to you to figure out the cipher using the input enciphered words and the list of real words from the `dictionary.lst` file.
 
 ### Input Format
 
