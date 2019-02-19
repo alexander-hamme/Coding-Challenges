@@ -35,9 +35,9 @@ public class Solution {
         Long count = 0L;
         for (Long key : lst) {
 
-            // check if a count exists for the current number in thirds.
+            // check if `key` exists as a key in thirds.
             // if so, then both key/r and key/r/r have previously occurred in lst
-            // as many times as the value currently mapped in thirds to key.
+            // as many times as the count value currently mapped to `key` in thirds.
             count += thirds.getOrDefault(key, 0L);
 
             // if `key` exists in seconds, then key/r has previously occurred 
