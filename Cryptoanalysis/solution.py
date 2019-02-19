@@ -1,4 +1,5 @@
 # Read input from STDIN. Print output to STDOUT
+# Python 3
 from typing import Dict, List
 import re
 
