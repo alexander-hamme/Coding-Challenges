@@ -27,7 +27,9 @@ The first line of the input is the number of travelers. Each of the following li
 
 ### Output:  
 
+```
 13
+```
 
 Steps to reach the solution:
 ```
@@ -94,7 +96,9 @@ Will RECOVERING London Tokyo Seattle
 
 ### Output: 
 
+```
 6
+```
 
 Steps to reach the solution:
 ```
