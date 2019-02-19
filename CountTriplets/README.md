@@ -6,7 +6,7 @@ For example, `arr = [1,4,16,64]`. If `r` = 4, we have `[1,4,16]` and `[4,16,64]`
 
 ### Function Description
 
-Complete the countTriplets function in the editor below. It should return the number of triplets forming a geometric progression for a given *r* as an integer.
+Complete the `countTriplets` function in the editor. It should return the number of triplets forming a geometric progression for a given `r` as an integer.
 
 countTriplets has the following parameter(s):
 
