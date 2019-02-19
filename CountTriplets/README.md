@@ -32,6 +32,7 @@ Return the count of triplets that form a geometric progression.
 
 `
 4 2
+
 1 2 2 4
 `
 
@@ -46,6 +47,7 @@ Explanation: There are 2 triplets satisfying our criteria, whose indices are `(0
 
 `
 6 3
+
 1 3 9 9 27 81
 `
 
@@ -60,6 +62,7 @@ Explanation: Triplets satisfying our criteria are at indices `(0,1,2)`, `(0,1,3)
 
 `
 5 5
+
 1 5 5 25 125
 `
 
