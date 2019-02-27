@@ -4,24 +4,24 @@ UTF-8 Bit-String Validity Checker
 Character	Code point	UTF-8 Encoding
 a	        97	        01100001
 ü	        252	        11000011 10111100
-☃	        	9731	    	11100010 10011000 10000011
+☃	        9731	    	11100010 10011000 10000011
 
 1-byte: 0xxxxxxx  
 2-byte: 110xxxxx 10xxxxxx  
 3-byte: 1110xxxx 10xxxxxx 10xxxxxx
 4-byte: 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
-... (pretending characters can contain more than 4 bytes)
+(...) (pretending characters can contain more than 4 bytes)
 
+Task:
 
-Write a function that determines whether a bit-String of an
+Write a function that determines whether a given bit-String of an
 undetermined length has valid UTF-8 encoding.
-
 */
 
 public class Solution {
 
-	private static final int max_bytes = 4;  // as long as this is >= the actual max number of bytes, 
-				  							 // the isValidUtf8String() function will work.
+    private static final int max_bytes = 4;  // as long as this is >= the actual max number of bytes, 
+				  	     // the isValidUtf8String() function will work.
 
     public static void main(String args[]) throws Exception {
 
@@ -30,7 +30,7 @@ public class Solution {
         s.check(true,  "01100001");
         // a☃
         s.check(true,  "01100001111000101001100010000011");
-		// aaa☃
+	// aaa☃
         s.check(true,  "011000010110000101100001111000101001100010000011");
         //              |       |       |       | x     |       |       |       
         s.check(false, "011000010110000101100001110000101001100010000011");
@@ -78,21 +78,3 @@ public class Solution {
         return true;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
