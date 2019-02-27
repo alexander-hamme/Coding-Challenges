@@ -1,6 +1,5 @@
 #!/bin/python3
 
-# Complete the checkMagazine function below.
 # runtime is O(2n + m)
 def checkMagazine(magazine, note):
     if len(note) > len(magazine):
