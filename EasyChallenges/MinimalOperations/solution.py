@@ -1,13 +1,12 @@
 #!/bin/python3
 
-# Task: write a function that calculates the minimal number of 
+# Task: write a function that, for each String in the 
+# provided String array, calculates the minimal number of 
 # character switches (i.e. changing 'a' to 'c' in a String)
-# needed to have no repeating characters in each String
-# within a String array
+# needed to have no repeating characters in the String
 #
 # The function is expected to return an INTEGER_ARRAY.
 # The function accepts STRING_ARRAY words as parameter.
-#
 
 ''' 
 Example 1 Input:
