@@ -24,6 +24,8 @@ The next line contains `n` space-separated integers `arr[i]`.
 - 1 ≤ `r` ≤ 10<sup>9</sup>
 - 1 ≤ `arr[i]` ≤ 10<sup>9</sup>
 
+Finally, in order to pass ALL the test cases on HackerRank, your solution must run in ***O(n)*** time. Brute forcing the solution will only pass about 3 of the 13 test cases.
+
 ### Output Format
 
 Return the count of triplets that form a geometric progression.
