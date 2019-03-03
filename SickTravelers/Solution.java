@@ -19,7 +19,7 @@ public class Solution {
     private ArrayList<Traveler> travelers = new ArrayList<>();
 
     public enum CityStatus {  // unrelated to the INFECTED enum field below
-        INFECTED, NOT_INFECTED
+        _INFECTED, NOT_INFECTED
     }
 
     // map city name to current city status. Values get reset at the start of each new day of travel.
@@ -74,7 +74,7 @@ public class Solution {
 
         public void checkIfInfected() {
             if (health == Health.HEALTHY) {
-                boolean got_infected = cities_infected.get(city_names[curr_city]) == CityStatus.INFECTED;
+                boolean got_infected = cities_infected.get(city_names[curr_city]) == CityStatus._INFECTED;
                 health = (got_infected) ? Health.INFECTED : Health.HEALTHY;
             }
         }
@@ -90,7 +90,7 @@ public class Solution {
             curr_city = (curr_city + 1) % numb_cities;
 
             if (this.isInfectious()) {      // set city status to infected
-                cities_infected.put(city_names[curr_city], CityStatus.INFECTED);    // O(1) operation
+                cities_infected.put(city_names[curr_city], CityStatus._INFECTED);    // O(1) operation
             }
         }
 
@@ -155,7 +155,7 @@ public class Solution {
 
             if (traveler.isInfectious()) {
                 cities_infected.put(                 // overwrite previous possible status with INFECTED
-                        traveler.currCity(), CityStatus.INFECTED
+                        traveler.currCity(), CityStatus._INFECTED
                 );
             }
 
