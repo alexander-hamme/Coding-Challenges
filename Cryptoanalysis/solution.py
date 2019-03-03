@@ -95,8 +95,8 @@ def getCharMap(cipher_words : List[str], full_words_list : List[str]) -> Dict[st
     
     for word in words_sub_set:
 		
-		# if verifiedMappings contains mappings for all 26 letters
-        if len(verifiedMappings) == 26 and all([v != '.' for v in verifiedMappings.items()]):
+	# if verifiedMappings contains mappings for all 26 letters
+        if len(verifiedMappings) == 26 and all([v != '.' for v in verifiedMappings.keys()]):
             break
 
         same_len_wrds = dct_word_counts.get(len(word))
