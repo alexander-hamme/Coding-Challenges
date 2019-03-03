@@ -18,7 +18,7 @@ public class Solution {
 
     private ArrayList<Traveler> travelers = new ArrayList<>();
 
-    public enum CityStatus {  // unrelated to the INFECTED enum field below
+    public enum CityStatus {
         IS_INFECTED, NOT_INFECTED
     }
 
