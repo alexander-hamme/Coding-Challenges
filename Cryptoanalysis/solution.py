@@ -68,7 +68,7 @@ def checkCipherOnWords(char_map : Dict[str, str], cipher_words : List[str], real
     return True
 
 
-def getCharMap(cipher_words : List[str], full_words_list : List[str]) -> int:
+def getCharMap(cipher_words : List[str], full_words_list : List[str]) -> Dict[str, str]:
 
     # create the smallest subset of words from `cipher_words` that contains all 26 letters
     all_ltrs_cphr = {}
