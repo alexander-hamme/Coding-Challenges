@@ -23,7 +23,7 @@ public class Solution {
     }
 
     // map city name to current city status. Values get reset at the start of each new day of travel.
-    private HashMap<String, CityStatus> cities_infected = new HashMap<>();
+    private HashMap<String, CityStatus> status_of_cities = new HashMap<>();
 
     private enum Health {
 
@@ -74,7 +74,7 @@ public class Solution {
 
         public void checkIfInfected() {
             if (health == Health.HEALTHY) {
-                boolean got_infected = cities_infected.get(city_names[curr_city]) == CityStatus.IS_INFECTED;
+                boolean got_infected = status_of_cities.get(city_names[curr_city]) == CityStatus.IS_INFECTED;
                 health = (got_infected) ? Health.INFECTED : Health.HEALTHY;
             }
         }
@@ -90,7 +90,7 @@ public class Solution {
             curr_city = (curr_city + 1) % numb_cities;
 
             if (this.isInfectious()) {      // set city status to infected
-                cities_infected.put(city_names[curr_city], CityStatus.IS_INFECTED);    // O(1) operation
+                status_of_cities.put(city_names[curr_city], CityStatus.IS_INFECTED);    // O(1) operation
             }
         }
 
@@ -154,13 +154,13 @@ public class Solution {
             Traveler traveler = new Traveler(fields[0], Health.valueOf(fields[1]), cities);
 
             if (traveler.isInfectious()) {
-                cities_infected.put(                 // overwrite previous possible status with INFECTED
+                status_of_cities.put(                 // overwrite previous possible status with INFECTED
                         traveler.currCity(), CityStatus.IS_INFECTED
                 );
             }
 
             for (String city : cities) {
-                cities_infected.putIfAbsent(city, CityStatus.NOT_INFECTED);  // don't overwrite previous possible statuses
+                status_of_cities.putIfAbsent(city, CityStatus.NOT_INFECTED);  // don't overwrite previous possible statuses
             }                                                                // with NOT_INFECTED
 
             travelers.add(traveler);
@@ -173,7 +173,7 @@ public class Solution {
 
         setupValues(input_strings);
 
-        Set<String> all_cities = cities_infected.keySet();
+        Set<String> all_cities = status_of_cities.keySet();
 
         int step = 0;
 
@@ -197,7 +197,7 @@ public class Solution {
             if (this.allAreHealthy()) { break; }                    // O(n)
 
             // reset all city values before next step
-            all_cities.forEach(city -> cities_infected.put(city, CityStatus.NOT_INFECTED));
+            all_cities.forEach(city -> status_of_cities.put(city, CityStatus.NOT_INFECTED));
 
             travelers.forEach(Traveler::moveNext);                  // O(n)
 
